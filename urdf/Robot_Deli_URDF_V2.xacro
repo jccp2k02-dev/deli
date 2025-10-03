@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Robot_Deli_URDF_V3">
+
+  <link name="base_footprint"/>
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 -0.10" rpy="0 0 0"/>
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0076861 -0.002324 0.27112"
+        rpy="0 0 0" />
+      <mass
+        value="62.297" />
+      <inertia
+        ixx="1.3167"
+        ixy="0.00044299"
+        ixz="-0.0058103"
+        iyy="1.219"
+        iyz="0.00028341"
+        izz="1.1874" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_fl_Link">
+    <inertial>
+      <origin
+        xyz="3.8935E-11 -2.9406E-10 0.025064"
+        rpy="0 0 0" />
+      <mass
+        value="0.26661" />
+      <inertia
+        ixx="8.0546E-05"
+        ixy="-2.6751E-15"
+        ixz="-3.7917E-14"
+        iyy="8.0546E-05"
+        iyz="-4.6255E-14"
+        izz="9.3196E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/wheel_fl_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/wheel_fl_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_fl_joint"
+    type="continuous">
+    <origin
+      xyz="0.171 0.36248 -0.05"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_fl_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="wheel_rl_Link">
+    <inertial>
+      <origin
+        xyz="8.7419E-11 3.5986E-10 0.024954"
+        rpy="0 0 0" />
+      <mass
+        value="0.26661" />
+      <inertia
+        ixx="8.0544E-05"
+        ixy="1.7735E-15"
+        ixz="1.1701E-12"
+        iyy="8.0544E-05"
+        iyz="-2.9867E-13"
+        izz="9.3181E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/wheel_rl_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/wheel_rl_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rl_joint"
+    type="continuous">
+    <origin
+      xyz="-0.171 0.36248 -0.05"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rl_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="wheel_fr_Link">
+    <inertial>
+      <origin
+        xyz="-8.72917294003628E-11 -3.59195673205193E-10 0.0249535483499442"
+        rpy="0 0 0" />
+      <mass
+        value="0.266614887623054" />
+      <inertia
+        ixx="8.05443070640261E-05"
+        ixy="1.78086165201405E-15"
+        ixz="-1.17014010971179E-12"
+        iyy="8.05443070633508E-05"
+        iyz="2.98636661542932E-13"
+        izz="9.31811521325844E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/wheel_fr_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/wheel_fr_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_fr_joint"
+    type="continuous">
+    <origin
+      xyz="0.171 -0.36248 -0.05"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_fr_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_rr_Link">
+    <inertial>
+      <origin
+        xyz="1.6112E-10 -2.6139E-10 0.024936"
+        rpy="0 0 0" />
+      <mass
+        value="0.26661" />
+      <inertia
+        ixx="8.0546E-05"
+        ixy="1.8275E-15"
+        ixz="-3.6582E-14"
+        iyy="8.0546E-05"
+        iyz="1.0934E-14"
+        izz="9.3196E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/wheel_rr_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/wheel_rr_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rr_joint"
+    type="continuous">
+    <origin
+      xyz="-0.171 -0.36248 -0.05"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rr_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="IMU_Link">
+    <inertial>
+      <origin
+        xyz="-5.5511E-15 0.00013973 -0.0077478"
+        rpy="0 0 0" />
+      <mass
+        value="0.019407" />
+      <inertia
+        ixx="2.3845E-06"
+        ixy="-3.4103E-21"
+        ixz="7.9967E-22"
+        iyy="2.5699E-06"
+        iyz="1.1531E-08"
+        izz="4.1993E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/IMU_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/IMU_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="IMU_joint"
+    type="fixed">
+    <origin
+      xyz="0.05795 -0.19895 0.045"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="IMU_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_front_Link">
+    <inertial>
+      <origin
+        xyz="-0.00292923970641334 2.42048063059386E-06 -0.028519332610462"
+        rpy="0 0 0" />
+      <mass
+        value="0.479195837044306" />
+      <inertia
+        ixx="0.000380471955720681"
+        ixy="1.22339791621775E-07"
+        ixz="5.42733181958772E-07"
+        iyy="0.000342162477933109"
+        iyz="3.53920106908289E-08"
+        izz="0.000273521780021243" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/lidar_front_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/lidar_front_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_front_joint"
+    type="fixed">
+    <origin
+      xyz="0.305612842344734 0.3085 0.0898135283408534"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_front_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_rear_Link">
+    <inertial>
+      <origin
+        xyz="-0.00292923997388916 2.42072432588003E-06 -0.0285193330086672"
+        rpy="0 0 0" />
+      <mass
+        value="0.479195821535757" />
+      <inertia
+        ixx="0.000380471949592814"
+        ixy="1.22340895547991E-07"
+        ixz="5.42729160319586E-07"
+        iyy="0.000342162470517987"
+        iyz="3.53923899630249E-08"
+        izz="0.000273521770371908" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/lidar_rear_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/lidar_rear_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_rear_joint"
+    type="fixed">
+    <origin
+      xyz="-0.30561 -0.3085 0.089814"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_rear_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_down_Link">
+    <inertial>
+      <origin
+        xyz="-6.31177002992089E-05 -0.000692617521245831 -0.0106328757748471"
+        rpy="0 0 0" />
+      <mass
+        value="0.123934137382002" />
+      <inertia
+        ixx="8.31624727386432E-05"
+        ixy="-8.66370143771771E-09"
+        ixz="5.08234493955877E-08"
+        iyy="1.11234009564339E-05"
+        iyz="-2.40123332010099E-07"
+        izz="8.59510594469909E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/camera_down_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/camera_down_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_down_joint"
+    type="fixed">
+    <origin
+      xyz="0.34072 -0.00037418 0.13727"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_down_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_up_Link">
+    <inertial>
+      <origin
+        xyz="-6.31177168539665E-05 0.00139780667249068 -0.0116328758568156"
+        rpy="0 0 0" />
+      <mass
+        value="0.123934136363998" />
+      <inertia
+        ixx="8.31624710681408E-05"
+        ixy="-8.66375467682836E-09"
+        ixz="5.08234810176175E-08"
+        iyy="1.11234009143258E-05"
+        iyz="-2.40123806878716E-07"
+        izz="8.59510580232483E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/camera_up_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/pooh_ubuntu/ros2_ws/src/Robot_Deli_URDF_V3/meshes/camera_up_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_up_joint"
+    type="fixed">
+    <origin
+      xyz="0.10572 0.0017162 1.1392"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_up_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+
+   <!-- joint_state -->
+  <gazebo>
+    <plugin name="gazebo_joint_state" filename="libgazebo_ros_joint_state_publisher.so">
+      <update_rate>20</update_rate>
+      <joint_name>wheel_fl_joint</joint_name>
+      <joint_name>wheel_fr_joint</joint_name>
+      <joint_name>wheel_rl_joint</joint_name>
+      <joint_name>wheel_rr_joint</joint_name>
+    </plugin>
+  </gazebo>
+  
+<!-- wheel -->
+  <gazebo>
+    <plugin name="mecanum_control" filename="libgazebo_ros_planar_move.so">
+      <command_topic>cmd_vel</command_topic>
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <odometry_rate>20.0</odometry_rate>
+      <robot_base_frame>base_footprint</robot_base_frame>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+    </plugin>
+  </gazebo>
+
+  
+  <gazebo reference="lidar_front_Link">
+    <sensor type="ray" name="lidar_front_sensor">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>20</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1.0000000</resolution>
+            <min_angle>-1.5714</min_angle>
+            <max_angle>3.14</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.05</min>
+          <max>12.0</max>
+          <resolution>0.0015</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="scan_front" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=scan_front</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>lidar_front_Link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+  <gazebo reference="lidar_rear_Link">
+    <sensor type="ray" name="lidar_rear_sensor">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>20</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1.0000000</resolution>
+            <min_angle>-1.5714</min_angle>
+            <max_angle>3.14</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.05</min>
+          <max>12.0</max>
+          <resolution>0.0015</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="scan_rear" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=scan_rear</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>lidar_rear_Link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+</robot>
