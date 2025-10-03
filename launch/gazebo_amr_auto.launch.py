@@ -8,8 +8,8 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
     pkg_share = FindPackageShare('robot_deli_urdf_v2').find('robot_deli_urdf_v2')
-    world_path = '/home/pooh_ubuntu/ros2_ws/src/robot_deli_urdf_v2/worlds/teenoi.world'
-    urdf_path  = "/home/pooh_ubuntu/ros2_ws/src/robot_deli_urdf_v2/urdf/Robot_Deli_URDF_V2.urdf"
+    world_path = '/home/jccp/delirobot/src/robot_deli_urdf_v2/worlds/teenoi.world'
+    urdf_path  = "/home/jccp/delirobot/src/robot_deli_urdf_v2/urdf/Robot_Deli_URDF_V2.urdf"
 
     # Read URDF
     with open(urdf_path, 'r', encoding='utf-8') as f:
@@ -44,7 +44,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')
         ),
-        launch_arguments={'world':'/home/pooh_ubuntu/ros2_ws/src/robot_deli_urdf_v2/worlds/teenoi.world'}.items()
+        launch_arguments={'world':'/home/jccp/delirobot/src/robot_deli_urdf_v2/worlds/teenoi.world'}.items()
     )
 
     # Spawn the robot from the /robot_description topic
