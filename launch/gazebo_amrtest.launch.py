@@ -35,7 +35,7 @@ def generate_launch_description():
                 'gazebo.launch.py'
             )
         ]),
-        launch_arguments={'world': '/home/pooh_ubuntu/ros2_ws/src/robot_deli_urdf_v2/worlds/teenoi.world'}.items()
+        launch_arguments={'world': '/home/jccp/delirobot/src/robot_deli_urdf_v2/worlds/teenoi.world'}.items()
     )
 
     # --- Robot State Publisher ---
